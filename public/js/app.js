@@ -2,6 +2,7 @@ $(function(){
   function renderIt(data){
       for ( var i = 0; i < data.data.children.length; i++ ){
 
+        var cDomain = data.data.children[i].domain;
         var cImage = data.data.children[i].data.url;
         var cTitle = data.data.children[i].data.title;
         var cAuthor = data.data.children[i].data.author;
@@ -13,8 +14,8 @@ $(function(){
         image.css("background-image", "url('" + cImage + "')");
         var h1tag = $("<h1>", { html : cTitle });
         var h2tag = $("<h2>", { html : cAuthor });
-        var age = $("<h2>", { html: "<span class='circle'></span> " + cDate + " ago"});
-        var score = $("<h2>", { html : "<span class='circle'></span> " + cScore + " views"});
+        var age = $("<h2>", { html: "<span class='circle'></span> " + cDate + " ago "});
+        var score = $("<h2>", { html : "<span class='circle'></span> " + cScore + " views "});
         var parapara = $("<p>", { html : " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptatibus, tempore, minima sit porro veniam molestias hic dolorum commodi ex vero, deserunt, magnam ea. Recusandae placeat quia, id sed quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quidem ut eius neque adipisci, temporibus. Porro temporibus eligendi, voluptates voluptatem animi dolor, voluptas consectetur quis mollitia soluta maiores harum inventore."});
 
         container.append( image, h1tag, h2tag, age, score, parapara );
@@ -43,7 +44,12 @@ $(function(){
       renderIt(data);
     });
   });
-
+// function imgurFail (domain, url){
+//   if (domain === "i.imgur.com"){
+//     return url.concat(".gifv");
+//   }
+//   return false;
+// }
   $(".plus_sign").click( function() {
     alert('NOT WORKING AHAHAHAHHAA');
   })

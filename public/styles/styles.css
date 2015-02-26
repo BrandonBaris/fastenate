@@ -129,6 +129,7 @@ nav {
         width: 5px;
         height: 5px;
         margin: 2px;
+        vertical-align: middle;
         border-radius: 1rem;
         background-color: #666; } }
 
@@ -155,13 +156,14 @@ nav {
     width: 5px;
     height: 5px;
     margin: 2px;
+    vertical-align: middle;
     border-radius: 1rem;
     background-color: #666; }
   .article_container:hover {
     border: thick solid #F38118; }
   @media only screen and (max-width:728px) {
     .article_container {
-      height: 450px; } }
+      height: 480px; } }
   @media only screen and (min-width:729px) {
     .article_container {
       width: 325px;
