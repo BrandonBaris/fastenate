@@ -26,21 +26,21 @@ $(function(){
 
   $( "#random_link" ).click( function() {
     $( ".content" ).empty();
-    $.getJSON( "api/random.json", function( data ) {
+    $.getJSON( "http://www.reddit.com/r/EarthPorn.json", function( data ) {
     renderIt(data);
     });
   });
   
   $( "#boards_link" ).click( function() {
     $( ".content" ).empty();
-    $.getJSON( "api/my_boards.json", function( data ) {
+    $.getJSON( "http://www.reddit.com/r/pimpcats.json", function( data ) {
       renderIt(data);
     });
   });
 
   $( "#app_link" ).click( function() {
     $( ".content" ).empty();
-    $.getJSON( "api/get_the_app.json", function( data ) {
+    $.getJSON( "http://www.reddit.com/r/pics.json", function( data ) {
       renderIt(data);
     });
   });
